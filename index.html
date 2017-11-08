@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Train Schedule App</title>
+
+    <!-- Link in Bootstrap CDN -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+    <!-- Link in CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+  </head>
+
+  <body>
+    
+
+
+    <!-- Jumbotron for Title of Page -->
+    <div class="jumbotron">
+       <!-- Page Title -->
+        <div id = "logo" class="col-lg-8 col-sm-8 col-xs-8">
+          <h1 class="text-center">Train Schedule App</h1>
+          <h2 class="text-center">Add a Train or View the Schedule</h2>
+          <h4 class="text-center">Updated every minute, on the minute</h4>
+        </div>
+
+    </div>
+    
+
+  <!-- Main Page Container -->
+  <div class="container">
+
+    <!-- Current Time -->
+    <div class="row">
+      <div class="col-lg-12">
+        <h1 class="text-center timedisplay">Current Time: <span id = "current-time" class = "timedisplay"></span></h1>
+      </div>
+    </div>
+
+    <br>
+
+
+      <!-- Train Schedule Panel -->
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+
+            <div class="panel-heading">
+              <h3 class="panel-title">Current Train Schedule</h3>
+            </div>
+                <div class="panel-body">
+                <table class="table">
+                <!-- Table Headers -->
+                <tr id = "static-table-header">
+                  <th>Train Name</th>
+                  <th>Destination</th>
+                  <th>Frequency (min)</th>
+                  <th>Next Departure</th>
+                  <th>Minutes to Departure</th>
+                </tr>
+
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add a Train</h3>
+            </div>
+            
+            <div class="panel-body">
+
+              <form role="form">
+                <div class="form-group">
+                  <label for="text">Train Name</label>
+                  <input type="text" class="form-control" id="trainName">
+                </div>
+                <div class="form-group">
+                  <label for="text">Train Destination</label>
+                  <input type="text" class="form-control" id="trainDestination">
+                </div>
+                <div class="form-group">
+                  <label for="text">First Departure for Today (Military Time - hh:mm)</label>
+                  <input type="text" class="form-control" id="trainFirstArrival">
+                </div>
+                <div class="form-group">
+                  <label for="text">Frequency of Departures (min)</label>
+                  <input type="number" class="form-control" id="trainFrequency">
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="btn btn-default" id="trainSubmit">Submit</button>
+
+              </form>
+
+            </div>
+          </div>
+        </div>    
+      </div>
+
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+    <script src="assets/app.js"></script>
+
+  </body>
+
+</html>
