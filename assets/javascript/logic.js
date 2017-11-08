@@ -14,9 +14,9 @@
 
   $("#trainSubmit").on("click", function(){
       var trainName = $("#trainName").val().trim();
-      var trainDestination = $("#trainDestination").val().trim();
-      var trainFirstArrival = momen($("#trainFirstArrival").val().trim(),"HH :mm").subtract(10, 'years');
-      var trainFrequency = $("#trainFrequnecy").val().trim(); 
+      var destination = $("#trainDestination").val().trim();
+      var firstTrain = moment($("#trainFirstArrival").val().trim(),"HH :mm").subtract(10, 'years');
+      var frequency = $("#trainFrequency").val().trim(); 
     
       console.log(firstTrain);
       return false; 
